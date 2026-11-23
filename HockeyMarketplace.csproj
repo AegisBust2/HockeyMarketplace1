@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SQLite: база хранится в обычном файле, ставить и настраивать ничего не нужно -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.20" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

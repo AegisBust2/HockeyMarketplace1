@@ -1,0 +1,26 @@
+<Window x:Class="HockeyMarketplace.Pages.ProductDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Товар" Width="560" Height="720" WindowStartupLocation="CenterOwner" Background="#F5F7FA">
+    <ScrollViewer>
+        <Border Background="White" Margin="18" Padding="22">
+            <StackPanel>
+                <TextBlock Text="Карточка товара" FontSize="25" FontWeight="Bold" Margin="0,0,0,15"/>
+                <TextBlock Text="Наименование"/><TextBox x:Name="NameBox"/>
+                <TextBlock Text="Артикул"/><TextBox x:Name="ArticleBox"/>
+                <TextBlock Text="Категория"/><ComboBox x:Name="CategoryBox" DisplayMemberPath="Name" SelectedValuePath="Id" Margin="4"/>
+                <TextBlock Text="Бренд"/><ComboBox x:Name="BrandBox" DisplayMemberPath="Name" SelectedValuePath="Id" Margin="4"/>
+                <TextBlock Text="Размер"/><TextBox x:Name="SizeBox"/>
+                <TextBlock Text="Цвет"/><TextBox x:Name="ColorBox"/>
+                <TextBlock Text="Закупочная цена"/><TextBox x:Name="PurchaseBox"/>
+                <TextBlock Text="Розничная цена"/><TextBox x:Name="RetailBox"/>
+                <TextBlock Text="Количество"/><TextBox x:Name="QuantityBox"/>
+                <TextBlock Text="Минимальный остаток"/><TextBox x:Name="MinBox"/>
+                <TextBlock Text="Страна-производитель"/><TextBox x:Name="CountryBox"/>
+                <TextBlock Text="Изображение (путь)"/><TextBox x:Name="ImageBox"/>
+                <TextBlock Text="Описание"/><TextBox x:Name="DescriptionBox" Height="70" TextWrapping="Wrap" AcceptsReturn="True"/>
+                <Button Content="Сохранить" Height="44" Margin="4,18,4,4" Click="Save_Click"/>
+            </StackPanel>
+        </Border>
+    </ScrollViewer>
+</Window>
